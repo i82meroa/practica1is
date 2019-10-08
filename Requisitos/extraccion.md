@@ -1,8 +1,8 @@
 ## Extraccíon de requisitos
 
 #### Partes interesadas:
-* Parte uno
-* Parte dos
+* Secretario de la clínica
+* Dueño de la clínica
 
 #### Datos que gestiona el sistema:
 * Pacientes
@@ -11,7 +11,7 @@
   * Teléfono de contacto
   * Código postal
   * Fecha de nacimiento
-  * Tipo de cliente (privado o asegurado por una empresa).
+  * Tipo de cliente (privado o asegurado por una empresa)
 
 #### Requisitos funcionales (ordenados por prioridad)
 1. Añadir un paciente
