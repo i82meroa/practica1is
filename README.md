@@ -1,3 +1,2 @@
-# CLINICA MEDICA
-
+# CLÍNICA MÉDICA
 Inicio del proyecto
