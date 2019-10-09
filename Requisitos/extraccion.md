@@ -25,7 +25,7 @@
 1. Añadir un paciente
 1. Añadir una cita
 1. Mostrar lista de pacientes
-1. Buscar cliente por nombre y apellidos
+1. Buscar cliente por nombre y apellidos o por DNI
 1. Modificar datos de los pacientes
 1. Mostrar historial médico de un paciente
 1. Mostar la lista de cita en orden temporal
