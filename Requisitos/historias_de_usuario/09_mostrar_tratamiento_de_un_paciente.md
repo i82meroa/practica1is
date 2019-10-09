@@ -1,24 +1,24 @@
-## Mostrar tratamiento de un paciente
+**ID**: 09
+**Nombre**: Mostrar tratamiento de un paciente
 
-**ID**: 07
-**Descripción**: Se muestra el tratamiento del cliente una vez estes mirando el historial medico
+**Prioridad** (de 1 a 10): 9
+**Puntos estimado**: 3
+**IteraciM-CM-3n**: 1
 
-**Actores principales**: Secretario(Administrador)
-**Actores secundarios**: Doctora
+**Responsable**: M-C^M-Angel MejM-CM--as
+                Manuel Mediavilla
+                Jose Antonio Medina
 
-**Precondiciones**:
-* Se debe visualizar el historial medico
+#### DescripciM-CM-3n
 
-**Flujo principal**:
-1. El secretario desea consultar el tratamiento para ello antes mira el historial medico
-1. El secretario abre el cuadro de diálogo de búsqueda en la menú principal
-1. Busca usuario y mira el historial médico
-1. El sistema muestra el tratamiento
+Como *administradores* queremos *localizar los datos de los tratamientos de un paciente* para *consultar su informaciM-CM-3n y las operaciones posibles sobre el
+mismo*
 
-**Postcondiciones**:
+#### ValidaciM-CM-3n
 
-* Se muestran al secretario los tratamientos con sus especificaciones
+* Se debe poder localizar cualquier cliente y su tartamiento
+* Los resultados de la bM-CM-:squeda pueden mostrar cero o mM-CM-!s
+resultados
+* Se deben mostrar todos los datos de los tratamientos
+* Se deben mostrar las operaciones posibles sobre los tratamientos
 
-**Flujos alternativos**:
-
-4.a. Si no existe el paciente y por tanto no existe el historial medico, informa al secretario con un mensaje de error
