@@ -12,6 +12,14 @@
   * Código postal
   * Fecha de nacimiento
   * Tipo de cliente (privado o asegurado por una empresa)
+  * Historial medico
+    * Tratamiento
+    * Enfermedades
+
+* Citas
+  *Nombre del paciente
+  *Fecha día y hora
+
 
 #### Requisitos funcionales (ordenados por prioridad)
 1. Añadir un paciente
