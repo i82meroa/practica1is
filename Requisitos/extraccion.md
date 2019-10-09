@@ -17,8 +17,8 @@
     * Enfermedades
 
 * Citas
-  *Nombre del paciente
-  *Fecha día y hora
+  * Nombre del paciente
+  * Fecha día y hora
 
 
 #### Requisitos funcionales (ordenados por prioridad)
