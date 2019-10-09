@@ -1,7 +1,7 @@
 **ID**: 01
 **Nombre**: Añadir un paciente
 
-**Prioridad** (de 1 a 10): 7
+**Prioridad** (de 1 a 10): 1
 **Puntos estimado**: 3
 **Iteración**: 1
 

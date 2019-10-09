@@ -1,7 +1,7 @@
 **ID**: 04
 **Nombre**: Buscar paciente por nombre y apellidos
 
-**Prioridad** (de 1 a 10): 7
+**Prioridad** (de 1 a 10): 4
 **Puntos estimado**: 3
 **Iteración**: 1
 
