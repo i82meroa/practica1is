@@ -1,0 +1,29 @@
+## Mostrar lista de citas pendientes en orden temporal
+
+**ID**: 08
+**DescripciM-CM-3n**: Se buscan las citas pendienres en orden
+temporal
+
+**Actores principales**: Secretario(Administrador)
+**Actores secundarios**: Doctora
+
+**Precondiciones**:
+* Deben existir citas pendientes
+
+**Flujo principal**:
+1. El secretario desea consultar los datos de las citas de los clientes
+1. El secretario abre el cuadro de diM-CM-!logo de bM-CM-:squeda en el
+menM-CM-:  principal
+1. El secretario introduce el perido de tiempo en el que desea ver las
+citas pendientes en orden temporal o indicar si quiere ver todas
+1. El sistema muestra por pantalla las citas pendientes en orden
+temporal
+
+**Postcondiciones**:
+
+* Se muestran al secretario los datos relativos a las citas pendientes
+
+**Flujos alternativos**:
+
+4.a. Si no existen citas pendientes en ese periodo, se muestra un mensaje de error
+
