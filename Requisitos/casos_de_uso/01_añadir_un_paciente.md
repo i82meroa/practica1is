@@ -2,8 +2,8 @@
 
 **ID**: 01
 **Descripción**: Se introduce el nombre y apellidos del
-usuario,Dirección postal, fecha de nacimiento , teléfono, saber si
-el cliente es privado o tiene un seguro.
+usuario,el DNI,dirección postal, fecha de nacimiento , teléfono, saber
+si el cliente es privado o tiene un seguro.
 
 **Actores principales**: Secretario(Administrador)
 **Actores secundarios**: Doctora
@@ -15,6 +15,7 @@ el cliente es privado o tiene un seguro.
 1. El secretario desea consultar los datos de un cliente
 1. El secretario abre el cuadro de diálogo de búsqueda en el menú  principal
 1. El secretario introduce el nombre y apellidos del cliente
+1. El secretario intruduce el DNI del cliente
 1. El secretario introduce la dirección postal del cliente
 1. El secretario introduce la fecha de nacimiento del cliente
 1. El secretario introduce el teléfono el cliente
