@@ -1,8 +1,8 @@
-## Añadir paciente
+## Añadir cita
 
 **ID**: 02
 **Descripción**: Se introduce una cita de un paciente con los datos del
-nmbre de paciente, y la fecha y hora en la que es concertada la cita.
+nmbre de paciente, DNI, y la fecha y hora en la que es concertada la cita.
 
 **Actores principales**: Secretario(Administrador)
 **Actores secundarios**: Doctora
@@ -14,9 +14,9 @@ estar cerca del horario de otra.
 * Que la cita sea concertada dentro del horario laboral de la clínica.
 
 **Flujo principal**:
-1. El secretario desea consultar la fecha y hora de la cita.
+1. El secretario desea añadir una cita.
 1. El secretario abre el cuadro de diálogo de búsqueda en el menú principal
-1. El secretario introduce el nombre y apellidos del cliente
+1. El secretario introduce el nombre, apellidos y DNI del cliente
 1. El secretario introduce la fecha y hora de la cita
 1. El sistema comprueba que no haya una cita a la hora solicitada
 1. El sistema confirma la cita
