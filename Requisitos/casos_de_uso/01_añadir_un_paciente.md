@@ -3,7 +3,7 @@
 **ID**: 01
 **Descripción**: Se introduce el nombre y apellidos del
 usuario,el DNI,dirección postal, fecha de nacimiento , teléfono, saber
-si el cliente es privado o tiene un seguro.
+si el cliente es de tipo privado o tiene un seguro.
 
 **Actores principales**: Secretario(Administrador)
 **Actores secundarios**: Doctora
