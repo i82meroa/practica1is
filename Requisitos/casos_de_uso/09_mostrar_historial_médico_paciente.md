@@ -8,7 +8,8 @@ que incluye el tratamiento y las enfermedades
 **Actores secundarios**: Doctora
 
 **Precondiciones**:
-* El paciente tenga historial médico
+* El paciente debe tener historial médico (ha de tener por lo menos
+entrada de historial).
 
 **Flujo principal**:
 1. El secretario desea buscar el historial de un paciente
