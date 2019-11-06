@@ -6,7 +6,7 @@
 * Desarrolladores del sistema:
   * Manuel Mediavilla Hidalgo
   * Ángel Mejías Rosa
-  * José Medina García
+  * José Antonio Medina García
 #### Datos que gestiona el sistema:
 * Pacientes
   * DNI
@@ -32,7 +32,7 @@
 1. Mostrar lista de pacientes
 1. Buscar cliente por nombre y apellidos o por DNI
 1. Modificar datos de los pacientes
-1. Añadir entrada al hsitorial del paciente
+1. Añadir entrada al historial del paciente
 1. Mostrar historial médico de un paciente
 1. Borrar datos de los pacientes
 1. Mostar la lista de cita en orden temporal
