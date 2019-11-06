@@ -1,22 +1,20 @@
-## Mostrar lista de pacientes
+**ID**: 03
+**Nombre**: Mostrar lista pacientes
 
-**ID**: 07
-**Descripción**: Se muestra todos los pacientes en una lista
+**Prioridad** (de 1 a 10): 3
+**Puntos estimado**: 3
+**Iteración**: 1
 
-**Actores principales**: Secretario(Administrador)
-**Actores secundarios**: Doctora
+**Responsable**: Ángel Mejias, Manuel Mediavilla, Jose Antonio Medina.
 
-**Precondiciones**:
-* Se deben haber realizado ya citas previamente.
+#### Descripción
 
-**Flujo principal**:
-1. El secretario desea consultar los datos de los pacientes
-1. El secretario da a la opcion para ver los pacientes y el sistema muestra por pantalla toda la lista
+* Como administrador quiero ver la lista de pacientes, quiero que en la lista se muestre el DNI, nombre y apellidos,
+teléfono de contacto, código postal, fecha de nacimiento, tipo de cliente.
 
-**Postcondiciones**:
+#### Validación
 
-* Se muestran las opciones de ver historial medico o modificacion de cada paciente
-
-**Flujos alternativos**:
-
-4.a. Si no existen el paciente, se muestra un mensaje de error
+* Se debe poder ver la lista de pacientes.
+* Se debe mostrar un mensaje afirmando que la lista ha sido. mostrada correctamente correctamente.
+* Se debe de mostrar los datos correctamente.
+* Se deben mostrar todos los datos del usuarios.

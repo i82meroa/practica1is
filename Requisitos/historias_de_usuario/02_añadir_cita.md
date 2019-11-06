@@ -5,9 +5,7 @@
 **Puntos estimado**: 3
 **Iteración**: 1
 
-**Responsable**: Ángel Mejias
-		 Manuel Mediavilla
-		 Jose Antonio Medina 
+**Responsable**: Ángel Mejias, Manuel Mediavilla, Jose Antonio Medina.
 
 #### Descripción
 
