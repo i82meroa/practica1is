@@ -1,4 +1,4 @@
-## Extraccíon de requisitos
+## Extracción de requisitos
 
 #### Partes interesadas:
 * Secretario de la clínica
@@ -16,13 +16,13 @@
   * Código postal
   * Fecha de nacimiento
   * Tipo de cliente (privado o asegurado por una empresa)
-  * Historial medico
+  * Historial médico
     * Tratamiento
     * Enfermedades
 
 * Citas
   * Nombre del paciente
-  * Fecha día y hora
+  * Fecha: día y hora
 
 
 #### Requisitos funcionales (ordenados por prioridad)
