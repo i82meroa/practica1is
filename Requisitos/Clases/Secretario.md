@@ -1,5 +1,5 @@
 ### Secretario
-Es la clase Secretario que hereda de la clase Persona siendo este un actor del sistema.
+Es la clase Secretario que hereda de la clase Persona, siendo este un actor del sistema
 
 | Datos  |||
 | -------|------- |---|
@@ -8,5 +8,5 @@ Es la clase Secretario que hereda de la clase Persona siendo este un actor del s
 | Métodos  ||
 | -------|------- |
 |Secretario|Constructor de la clase. Permite inicializar todos los parámetros imprescindibles para el uso de la clase|
-|getContraseña|Proporciona los apellidos de la persona|
+|getContraseña|Proporciona la contraseña de la persona|
 |setContraseña|Función en la que el sistema recoje o modifica la contraseña para comprobar que sea correcta|

@@ -3,7 +3,7 @@ Proporciona un objeto con todos los datos necesarios para una cita
 
 | Datos  |||
 | -------|------- |---|
-| DniPaciente | cadena |Código identificador del cliente.|
+| DniPaciente | cadena |Código identificador del cliente|
 | Fecha | fecha |Fecha de la cita del paciente|
 | Hora | fecha |Hora de la cita del paciente|
 
