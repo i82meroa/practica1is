@@ -1,4 +1,4 @@
-**ID**: 08
+**ID**: 09
 **Nombre**: Borrar los datos de los pacientes
 
 **Prioridad** (de 1 a 10): 7

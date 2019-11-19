@@ -1,4 +1,4 @@
-**ID**: 07
+**ID**: 08
 **Nombre**: Añadir entrada de historial médico del paciente
 
 **Prioridad** (de 1 a 10): 5

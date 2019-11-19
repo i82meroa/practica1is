@@ -1,4 +1,4 @@
-**ID**: 06
+**ID**: 10
 **Nombre**: Mostrar historial médico del paciente
 
 **Prioridad** (de 1 a 10): 6
