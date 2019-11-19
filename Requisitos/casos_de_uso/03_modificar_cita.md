@@ -1,8 +1,7 @@
-## Modificar o cancelar cita
+## Modificar cita
 
 **ID**: 03
-**Descripción**: Se modifica una cita cambiando el dia y la hora o se
-cancela la cita.
+**Descripción**: Se modifica una cita cambiando el dia y la hora.
 
 **Actores principales**: Secretario(Administrador)
 **Actores secundarios**: Doctora
@@ -19,11 +18,11 @@ cancela la cita.
 1. El secretario mira las citas solicitadas del paciente
 1. El secretario introduce la fecha solicitada a modificar
 1. El sistema se encarga de garantizar que dicha fecha (día y hora) no esten solicitados previemente.
-1. El sistema confirma la cita
+1. El sistema confirma la modificación de la cita
 
 **Postcondiciones**:
 
-* Se muestra al usuario la modifiación de la cita y su confirmación
+* Se muestra al usuario la modificación de la cita y su confirmación
 
 **Flujos alternativos**:
 
