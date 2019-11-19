@@ -1,5 +1,5 @@
 ## Añadir entrada al historial del paciente
-**ID**: 07
+**ID**: 08
 **Descripción**: Se creal una entrada para el historial médico
 del paciente en el caso de no tenerlo.
 

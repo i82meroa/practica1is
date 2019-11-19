@@ -1,6 +1,6 @@
 ## Mostrar lista de pacientes
 
-**ID**: 03
+**ID**: 05
 **Descripción**: Se muestra una lista para que el secretario pueda ver a todos los pacientes
 
 **Actores principales**: Secretario(Administrador)

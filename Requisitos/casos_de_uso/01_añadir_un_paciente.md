@@ -2,14 +2,13 @@
 
 **ID**: 01
 **Descripción**: Se introduce el nombre y apellidos del
-usuario,el DNI,dirección postal, fecha de nacimiento , teléfono, saber
-si el cliente es de tipo privado o tiene un seguro.
+usuario, el DNI, dirección postal, fecha de nacimiento, teléfono y saber si el cliente es de tipo privado o tiene un seguro.
 
 **Actores principales**: Secretario(Administrador)
 **Actores secundarios**: Doctora
 
 **Precondiciones**:
-* El paciente que queremos añadir no esté ya añadido
+* Que el paciente que queremos añadir no esté ya añadido
 
 **Flujo principal**:
 1. El secretario desea consultar los datos de un cliente
@@ -29,4 +28,3 @@ si el cliente es de tipo privado o tiene un seguro.
 **Flujos alternativos**:
 
 4.a. Si no existe el usuario, se muestra un mensaje de error
-

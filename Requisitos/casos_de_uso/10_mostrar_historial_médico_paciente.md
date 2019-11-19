@@ -1,6 +1,6 @@
 ## Mostrar historial médico del paciente
 
-**ID**: 06
+**ID**: 10
 **Descripción**: Se muestra el historial médico del paciente 
 que incluye el tratamiento y las enfermedades
 

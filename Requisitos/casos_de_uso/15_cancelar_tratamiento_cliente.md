@@ -1,6 +1,6 @@
 ## Cancelar el tratamiento del paciente
 
-**ID**: 14
+**ID**: 15
 **Descripción**: Se elimina un tratamiento a la enfermedad del paciente
 
 **Actores principales**: Secretario(Administrador)

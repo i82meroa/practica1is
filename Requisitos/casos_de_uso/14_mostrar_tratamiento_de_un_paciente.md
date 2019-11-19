@@ -1,6 +1,6 @@
 ## Mostrar tratamiento médico del paciente
 
-**ID**: 06
+**ID**: 14
 **Descripción**: Se muestra el tratamiento médico del paciente
 
 **Actores principales**: Secretario(Administrador)

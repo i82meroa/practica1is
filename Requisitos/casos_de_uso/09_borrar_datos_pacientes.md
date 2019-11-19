@@ -1,6 +1,6 @@
 ## Borrar datos de los pacientes
 
-**ID**: 08
+**ID**: 09
 **Descripción**: Se borra al paciente inscrito con todo sus datos
 **Actores principales**: Secretario(Administrador)
 **Actores secundarios**: Doctora

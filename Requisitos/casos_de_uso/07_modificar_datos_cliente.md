@@ -1,6 +1,6 @@
 ## Modificar paciente
 
-**ID**: 05
+**ID**: 07
 **Descripción**: Se modifica el nombre y apellidos del
 usuario,el DNI, dirección postal, fecha de nacimiento ,
 teléfono, y la clase de cliente que es, privado o tiene un seguro.

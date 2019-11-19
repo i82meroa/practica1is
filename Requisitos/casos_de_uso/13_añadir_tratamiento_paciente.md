@@ -1,6 +1,6 @@
 ## Añadir el tratamiento del paciente
 
-**ID**: 12
+**ID**: 13
 **Descripción**: Se añade un tratamiento a la enfermedad del paciente
 
 **Actores principales**: Secretario(Administrador)

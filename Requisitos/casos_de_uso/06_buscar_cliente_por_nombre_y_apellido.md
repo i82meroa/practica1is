@@ -1,6 +1,6 @@
 ## Buscar cliente por nombre y apellido o por DNI
 
-**ID**: 04
+**ID**: 06
 **DescripciM-CM-3n**: Se muestra un usuario en concreto para poder observar distintos campos suyos
 **Actores principales**: Secretario(Administrador)
 **Actores secundarios**: Doctora
