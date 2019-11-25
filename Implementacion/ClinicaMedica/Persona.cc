@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Persona.h"
-#define AÑOACTUAl 2019;
+#define ANOACTUAl 2019;
 
 
 using namespace std;
@@ -8,8 +8,8 @@ using namespace std;
 
 
 
-bool Persona::setFechaNacimiento(int dia, int mes , int año){
-	if(año>=1900 && año <= AÑOACTUAl){
+bool Persona::setFechaNacimiento(int dia, int mes , int ano){
+	if(ano>=1900 && ano <= ANOACTUAl){
 		switch(mes){
 			case 1:
 				if(dia <1 || dia > 31)
@@ -52,9 +52,9 @@ bool Persona::setFechaNacimiento(int dia, int mes , int año){
 		}
 		fechaNacimiento_.dia=dia;
 		fechaNacimiento_.mes=1;
-		fechaNacimiento_.año=año;
+		fechaNacimiento_.ano=ano;
 
 	}else{
-		return false;// el mes se introdujo fuera de rango o el año
+		return false;// el mes se introdujo fuera de rango o el ano
 	}
 }

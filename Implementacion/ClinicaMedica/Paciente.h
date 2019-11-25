@@ -9,10 +9,11 @@ using namespace std;
 
 class Paciente:public Persona{
 	private:
-		string alergenos_;
+		//string alergenos_;
 
 	public:
-		paciente(string alergenos):
+	//	Paciente(string alergenos):
+		Paciente():
 				Persona(string dni, string nombre="", string apellidos="",
 			    string telefono="", fecha fechaNacimiento){
 			setDNI(dni);
@@ -20,10 +21,11 @@ class Paciente:public Persona{
 			setApellidos(apellidos);
 			setTelefono(telefono);
 			setFechaNacimiento(fechaNacimiento);
-			setAlergenos(alergenos);
+			//setAlergenos(alergenos);
 		}; //constructor
-		inline void setAlergenos(string alergenos){alergenos_=alergenos;};
-		inline string getAlergenos(){return alergenos_;};
+
+		//inline void setAlergenos(string alergenos){alergenos_=alergenos;};
+		//inline string getAlergenos(){return alergenos_;};
 };
 
 #endif

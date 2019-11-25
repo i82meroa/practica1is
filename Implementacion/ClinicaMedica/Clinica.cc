@@ -1,7 +1,14 @@
-void Paciente::leeJugadores(){
+#include <iostream>
+#include <stdlib.h>
+#include <fstream>
+#include <list>
+
+using namespaces std;
+
+void Paciente::leePaciente(){
 
     string dni,nombre,apellidos,telefono,fechaNacimiento, alergenos;
-    jugadores_.clear();
+		pacientes_.clear();
 		string nombreFichero ="pacientes.txt";
 
 		ifstream ficheroApuestas(nombreFichero);
@@ -16,7 +23,7 @@ void Paciente::leeJugadores(){
 		Paciente a(dni,codigo,nombre,apellidos,stoi(edad),
 				direccion,localidad,provincia,
 				pais);
-		jugadores_.push_back(a);
+		pacientes_.push_back(a);
 	}
 	ficheroApuestas.close();
 }
