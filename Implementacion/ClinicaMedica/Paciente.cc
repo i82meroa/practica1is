@@ -1,15 +1,12 @@
 #include <iostream>
-#include "Persona.h"
-#define ANOACTUAl 2019;
-
+#include "Paciente.h"
 
 using namespace std;
 
 
-
-
-bool Persona::setFechaNacimiento(int dia, int mes , int ano){
-	if(ano>=1900 && ano <= ANOACTUAl){
+bool Paciente::setFechaNacimiento(int dia, int mes , int ano){
+	int const ANIO_ACTUAL=2019;
+	if(ano>=1900 && ano <= ANIO_ACTUAL){
 		switch(mes){
 			case 1:
 				if(dia <1 || dia > 31)
@@ -54,7 +51,11 @@ bool Persona::setFechaNacimiento(int dia, int mes , int ano){
 		fechaNacimiento_.mes=1;
 		fechaNacimiento_.ano=ano;
 
-	}else{
+		return true;
+
+	}
+	else{
 		return false;// el mes se introdujo fuera de rango o el ano
 	}
+
 }
