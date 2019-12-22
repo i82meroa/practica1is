@@ -1,10 +1,11 @@
 #include <iostream>
+#include <fstream>
 #include <stdio.h>
 #include <cstdlib>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 #include "Paciente.h"
-//#include "Persona.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int textoMenu1();
 int textoMenu2();
 void menu1();
 void menu2();
+bool nuevoPaciente ();
 
 int main(){
 	menu1();
@@ -67,42 +69,22 @@ int textoMenu2(){
 }
 
 
-bool addPaciente(Paciente paciente, list <Paciente> pacientes){
-
-	//recorremos la lista para ver si ha sido añadido anteriormente
-	list <Paciente>::iterator i;
-	for(i=pacientes.begin(); i != pacientes.end(); ++i){
-		if(paciente.getDNI() == (*i).getDNI()){
-			return false;
-		}
-	}
-	pacientes.push_back(paciente);//lo añade al final
-
-	string nombreFichero =paciente.getDNI()+".txt"; //creamos el nombre del fichero con el dni del paciente
-
-	ofstream ficheropaciente(nombreFichero); //abre el fichero de salida
-
-	ficheropaciente.close();
-	return true;
-}
-
-
 void menu2(){
 	bool continuar = true;
 
 	do{
 		system("clear");
 		switch(textoMenu2()){
-			case 1://opciones de paciente
+			case 1://añadir paciente
+				nuevoPaciente ();
+				break;
+			case 2:
 
 				break;
-			case 2://opciones de secretario
+			case 3:
 
 				break;
-			case 3://opciones de medicos
-
-				break;
-			case 6://sale de la clínica
+			case 6:
 				continuar=false;
 				break;
 			default:
@@ -112,3 +94,51 @@ void menu2(){
 	}while(continuar);
 	system("clear");
 }
+
+
+
+
+//Hasta aqui es todo del menu, meter funciones de utilidad debajo
+
+
+
+bool nuevoPaciente (){
+	string nombreFichero ="pacientes.txt";
+	char * dni, *nombre, *apellidos,*telefono, *alergenos;
+	//string dni,nombre, apellidos,telefono,alergenos;
+	int dia, mes, ano;
+	printf("Introduce el DNI\n");
+	scanf("%s",dni);
+	printf("Introduce el nombre\n");
+	scanf("%s",nombre);
+	printf("Introduce el apellidos\n");
+	scanf("%s",apellidos);
+	printf("Introduce el telefono\n");
+	scanf("%s",telefono);
+	printf("La fecha de nacimiento\n");
+	printf("dia\n");
+	scanf("%d",&dia);
+	printf("mes\n");
+	scanf("%d",&mes);
+	printf("ano\n");
+	scanf("%d",&ano);
+	printf("Introduce el alergenos\n");
+	scanf("%s",alergenos);
+
+	Paciente pacienteNuevo(dni,nombre,apellidos,telefono,alergenos);
+
+	//pacienteNuevo.setFechaNacimiento(dia,mes,ano);
+
+	ofstream ficheropaciente(nombreFichero);
+	ficheropaciente << pacienteNuevo.getDNI() << ",";
+	ficheropaciente << pacienteNuevo.getNombre() << ",";
+	ficheropaciente << pacienteNuevo.getApellidos() << ",";
+	ficheropaciente << pacienteNuevo.getTelefono() << ",";
+	ficheropaciente << dia <<"/"<<mes<<"/"<<ano<< ",";
+	ficheropaciente << pacienteNuevo.getAlergenos() << "\n";
+
+	ficheropaciente.close();
+
+	return 0;
+}
+

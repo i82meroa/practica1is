@@ -20,17 +20,15 @@ class Paciente{
 		string telefono_;
 		fecha fechaNacimiento_;
 		string alergenos_;
-		//int num_historiales_;
 
 	public:
-		Paciente(/*int num_historiales=0,*/ string dni="", string nombre="", string apellidos="", string telefono="", string alergenos=""){
+		Paciente(string dni="", string nombre="", string apellidos="", string telefono="", string alergenos=""){
 			setDNI(dni);
 			setNombre(nombre);
 			setApellidos(apellidos);
 			setTelefono(telefono);
 			setFechaNacimiento(1,1,2000);
 			setAlergenos(alergenos);
-			//setNumHistoriales(num_historiales);
 		}; //constructor
 		inline void setDNI(string dni){dni_=dni;};
 		inline string getDNI(){return dni_;};
@@ -43,8 +41,6 @@ class Paciente{
 		bool setFechaNacimiento(int dia, int mes , int ano); // true si la asignacion se ha realizado correctamente y false si no se ha hecho la asignacion.
 		inline fecha getFechaNacimiento(){return fechaNacimiento_;};
 		inline string getApellidosyNombre(){return apellidos_+", "+nombre_;};
-		//inline void setNumHistoriales(int num_historiales){num_historiales_=num_historiales;};
-		//inline int getNumHistoriales(){return num_historiales_;};
 		inline void setAlergenos(string alergenos){alergenos_=alergenos;};
 		inline string getAlergenos(){return alergenos_;};
 };
