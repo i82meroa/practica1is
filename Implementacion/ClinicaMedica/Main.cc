@@ -18,6 +18,7 @@ bool nuevoPaciente();
 bool mostrarPacientes();
 bool mostrarPaciente();
 bool borrarPaciente();
+bool modificarPaciente();
 
 int main(){
 	menu1();
@@ -87,6 +88,9 @@ void menu2(){
 				break;
 			case 3:
 				mostrarPacientes();
+				break;
+			case 4:
+				modificarPaciente();
 				break;
 			case 5:
 				borrarPaciente();
@@ -238,6 +242,77 @@ bool borrarPaciente (){
 				fprintf(fichero2,"%s,%s,%s,%s,%d/%d/%d,%s\n",dni,nombre,apellidos,telefono,dia,mes,ano,alergenos);
 			}else{
 				printf("Borrado con exito\n");
+			}
+		}
+			fclose(fichero);
+			fclose(fichero2);
+	}else{
+		printf("No hay ningun paciente\n");
+	}
+	remove("pacientes.txt");
+	rename("temporal.txt","pacientes.txt");
+	printf("Pulse cualquier tecla para continuar\n");
+	scanf("%s",&continuar);
+
+	return 0;
+}
+
+bool modificarPaciente(){
+	bool fechaCorrecta;
+	char dni[9],dniBuscado[9], nombre[20], apellidos[50],telefono[12], alergenos[100],continuar;
+	int dia, mes, ano;
+	printf("Dame el dni buscado\n");
+	scanf("%s",dniBuscado);
+	FILE * fichero,*fichero2;
+	fichero=fopen("pacientes.txt","r");
+	fichero2=fopen("temporal.txt","w");
+	if(fichero!=NULL){
+		while(feof(fichero)==0){
+			fgets(dni,9,fichero);
+			fgets(nombre,20,fichero);
+			fgets(apellidos,50,fichero);
+			fgets(telefono,12,fichero);
+			fscanf(fichero,"%d%d%d",&dia,&mes,&ano);
+			fgets(alergenos,100,fichero);
+			if(dniBuscado != dni){
+				fprintf(fichero2,"%s,%s,%s,%s,%d/%d/%d,%s\n",dni,nombre,apellidos,telefono,dia,mes,ano,alergenos);
+			}else{
+				int opcion;
+				printf("¿Que quieres modificar?\n1)nombre\n2)apellidos\n3)telefono\n4)alergenos\nIntroduce numero de la opcion\n");
+				scanf("%d",&opcion);
+				switch(opcion){
+					case 1:
+						printf("Introduce el DNI\n");
+						scanf("%s",dni);
+						break;
+					case 2:
+						printf("Introduce el nombre\n");
+						scanf("%s",nombre);
+						break;
+					case 3:
+						printf("Introduce el apellidos\n");
+						scanf("%s",apellidos);
+						break;
+					case 4:
+						printf("Introduce el telefono\n");
+						scanf("%s",telefono);
+						break;
+					case 5:
+						printf("La fecha de nacimiento\n");
+						printf("dia\n");
+						scanf("%d",&dia);
+						printf("mes\n");
+						scanf("%d",&mes);
+						printf("ano\n");
+						scanf("%d",&ano);
+						break;
+					case 6:
+						printf("Introduce el alergenos\n");
+						scanf("%s",alergenos);
+						break;
+					default:
+					 printf("No es el numero de ninguna opción\n");
+				}
 			}
 		}
 			fclose(fichero);
