@@ -2,8 +2,7 @@
 #define PACIENTE_H
 
 #include <iostream>
-#include <string>
-#include "Paciente.h"
+#include <string.h>
 using namespace std;
 
 struct fecha{
@@ -27,7 +26,6 @@ class Paciente{
 			setNombre(nombre);
 			setApellidos(apellidos);
 			setTelefono(telefono);
-			setFechaNacimiento(1,1,2000);
 			setAlergenos(alergenos);
 		}; //constructor
 		inline void setDNI(string dni){dni_=dni;};
@@ -43,6 +41,7 @@ class Paciente{
 		inline string getApellidosyNombre(){return apellidos_+", "+nombre_;};
 		inline void setAlergenos(string alergenos){alergenos_=alergenos;};
 		inline string getAlergenos(){return alergenos_;};
+		void imprimirPaciente();
 };
 
 #endif

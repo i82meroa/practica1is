@@ -48,14 +48,16 @@ bool Paciente::setFechaNacimiento(int dia, int mes , int ano){
 				return false;
 		}
 		fechaNacimiento_.dia=dia;
-		fechaNacimiento_.mes=1;
+		fechaNacimiento_.mes=mes;
 		fechaNacimiento_.ano=ano;
 
 		return true;
 
 	}
-	else{
-		return false;// el mes se introdujo fuera de rango o el ano
-	}
+	return false;// el mes se introdujo fuera de rango o el ano
+}
 
+
+void Paciente::imprimirPaciente(){
+	printf("%s,%s,%s,%s,%d/%d/%d,%s\n",dni_,nombre_,apellidos_,telefono_,fechaNacimiento_.dia,fechaNacimiento_.mes,fechaNacimiento_.ano,alergenos_);
 }

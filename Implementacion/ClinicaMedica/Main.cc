@@ -15,6 +15,7 @@ int textoMenu2();
 void menu1();
 void menu2();
 bool nuevoPaciente ();
+bool mostrarPacientes ();
 
 int main(){
 	menu1();
@@ -76,10 +77,11 @@ void menu2(){
 		system("clear");
 		switch(textoMenu2()){
 			case 1://añadir paciente
+				system("clear");
 				nuevoPaciente ();
 				break;
 			case 2:
-
+				mostrarPacientes();
 				break;
 			case 3:
 
@@ -103,18 +105,17 @@ void menu2(){
 
 
 bool nuevoPaciente (){
-	string nombreFichero ="pacientes.txt";
-	char * dni, *nombre, *apellidos,*telefono, *alergenos;
+	char dni[9], nombre[20], apellidos[50],telefono[12], alergenos[100];
 	//string dni,nombre, apellidos,telefono,alergenos;
 	int dia, mes, ano;
 	printf("Introduce el DNI\n");
-	scanf("%s",dni);
+	scanf("%s",(char *)&dni);
 	printf("Introduce el nombre\n");
-	scanf("%s",nombre);
+	scanf("%s",(char *)&nombre);
 	printf("Introduce el apellidos\n");
-	scanf("%s",apellidos);
+	scanf("%s",(char *)&apellidos);
 	printf("Introduce el telefono\n");
-	scanf("%s",telefono);
+	scanf("%s",(char *)&telefono);
 	printf("La fecha de nacimiento\n");
 	printf("dia\n");
 	scanf("%d",&dia);
@@ -123,22 +124,46 @@ bool nuevoPaciente (){
 	printf("ano\n");
 	scanf("%d",&ano);
 	printf("Introduce el alergenos\n");
-	scanf("%s",alergenos);
+	scanf("%s",(char *)&alergenos);
 
-	Paciente pacienteNuevo(dni,nombre,apellidos,telefono,alergenos);
+	
 
-	//pacienteNuevo.setFechaNacimiento(dia,mes,ano);
+	
 
-	ofstream ficheropaciente(nombreFichero);
-	ficheropaciente << pacienteNuevo.getDNI() << ",";
-	ficheropaciente << pacienteNuevo.getNombre() << ",";
-	ficheropaciente << pacienteNuevo.getApellidos() << ",";
-	ficheropaciente << pacienteNuevo.getTelefono() << ",";
-	ficheropaciente << dia <<"/"<<mes<<"/"<<ano<< ",";
-	ficheropaciente << pacienteNuevo.getAlergenos() << "\n";
 
-	ficheropaciente.close();
+	FILE * fichero;
+	fichero=fopen("pacientes.txt","a+");
+	if(fichero==NULL){
+		fichero=fopen("pacientes.txt","w");
+	}
+
+	fprintf(fichero,"%s,%s,%s,%s,%d/%d/%d,%s\n",dni,nombre,apellidos,telefono,dia,mes,ano,alergenos);
+	fclose(fichero);
 
 	return 0;
 }
 
+bool mostrarPacientes (){
+	bool fechaCorrecta;
+	char dni[9], nombre[20], apellidos[50],telefono[12], alergenos[100],continuar;
+	int dia, mes, ano;
+
+	FILE * fichero;
+	fichero=fopen("pacientes.txt","r");
+	if(fichero!=NULL){
+		printf("DNI           NOMBRE        APELLIDOS         TELEFONO    FECHA NACIMIENTO  ALERGENOS\n");
+	printf("_______________________________________________________________________________________");
+		while(feof(fichero)){
+			fscanf(fichero,"%s,%s,%s,%s,%d/%d/%d,%s\n",dni,nombre,apellidos,telefono,&dia,&mes,&ano,alergenos);
+			Paciente pacienteNuevo(dni,nombre, apellidos,telefono,alergenos);
+			fechaCorrecta=pacienteNuevo.setFechaNacimiento(dia,mes,ano);
+		}
+			fclose(fichero);
+	}else{
+		printf("No hay ningun paciente\n");
+	}
+	printf("Pulse cualquier tecla para continuar\n");
+	scanf("%s",&continuar);
+
+	return 0;
+}
