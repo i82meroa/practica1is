@@ -152,11 +152,12 @@ bool mostrarPacientes (){
 	fichero=fopen("pacientes.txt","r");
 	if(fichero!=NULL){
 		printf("DNI           NOMBRE        APELLIDOS         TELEFONO    FECHA NACIMIENTO  ALERGENOS\n");
-	printf("_______________________________________________________________________________________");
-		while(feof(fichero)){
+	printf("_______________________________________________________________________________________\n");
+		while(feof(fichero)==0){
 			fscanf(fichero,"%s,%s,%s,%s,%d/%d/%d,%s\n",dni,nombre,apellidos,telefono,&dia,&mes,&ano,alergenos);
 			Paciente pacienteNuevo(dni,nombre, apellidos,telefono,alergenos);
 			fechaCorrecta=pacienteNuevo.setFechaNacimiento(dia,mes,ano);
+			pacienteNuevo.imprimirPaciente();
 		}
 			fclose(fichero);
 	}else{

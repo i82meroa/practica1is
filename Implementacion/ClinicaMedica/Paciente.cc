@@ -59,5 +59,5 @@ bool Paciente::setFechaNacimiento(int dia, int mes , int ano){
 
 
 void Paciente::imprimirPaciente(){
-	printf("%s,%s,%s,%s,%d/%d/%d,%s\n",dni_,nombre_,apellidos_,telefono_,fechaNacimiento_.dia,fechaNacimiento_.mes,fechaNacimiento_.ano,alergenos_);
+	printf("%s,%s,%s,%s,%d/%d/%d,%s\n",dni_.c_str(),nombre_.c_str(),apellidos_.c_str(),telefono_.c_str(),fechaNacimiento_.dia,fechaNacimiento_.mes,fechaNacimiento_.ano,alergenos_.c_str());
 }
