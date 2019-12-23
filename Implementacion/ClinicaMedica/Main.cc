@@ -14,9 +14,10 @@ int textoMenu1();
 int textoMenu2();
 void menu1();
 void menu2();
-bool nuevoPaciente ();
-bool mostrarPacientes ();
-bool mostrarPaciente ();
+bool nuevoPaciente();
+bool mostrarPacientes();
+bool mostrarPaciente();
+bool borrarPaciente();
 
 int main(){
 	menu1();
@@ -86,6 +87,9 @@ void menu2(){
 				break;
 			case 3:
 				mostrarPacientes();
+				break;
+			case 5:
+				borrarPaciente();
 				break;
 			case 6:
 				continuar=false;
@@ -194,7 +198,7 @@ bool mostrarPaciente (){
 			fgets(nombre,20,fichero);
 			fgets(apellidos,50,fichero);
 			fgets(telefono,12,fichero);
-			fscanf(fichero,"%d/%d/%d",&dia,&mes,&ano);
+			fscanf(fichero,"%d%d%d",&dia,&mes,&ano);
 			fgets(alergenos,100,fichero);
 			if(dniBuscado == dni){
 				Paciente pacienteNuevo(dni,nombre, apellidos,telefono,alergenos);
@@ -213,3 +217,38 @@ bool mostrarPaciente (){
 }
 
 
+bool borrarPaciente (){
+	bool fechaCorrecta;
+	char dni[9],dniBuscado[9], nombre[20], apellidos[50],telefono[12], alergenos[100],continuar;
+	int dia, mes, ano;
+	printf("Dame el dni buscado\n");
+	scanf("%s",dniBuscado);
+	FILE * fichero,*fichero2;
+	fichero=fopen("pacientes.txt","r");
+	fichero2=fopen("temporal.txt","w");
+	if(fichero!=NULL){
+		while(feof(fichero)==0){
+			fgets(dni,9,fichero);
+			fgets(nombre,20,fichero);
+			fgets(apellidos,50,fichero);
+			fgets(telefono,12,fichero);
+			fscanf(fichero,"%d%d%d",&dia,&mes,&ano);
+			fgets(alergenos,100,fichero);
+			if(dniBuscado != dni){
+				fprintf(fichero2,"%s,%s,%s,%s,%d/%d/%d,%s\n",dni,nombre,apellidos,telefono,dia,mes,ano,alergenos);
+			}else{
+				printf("Borrado con exito\n");
+			}
+		}
+			fclose(fichero);
+			fclose(fichero2);
+	}else{
+		printf("No hay ningun paciente\n");
+	}
+	remove("pacientes.txt");
+	rename("temporal.txt","pacientes.txt");
+	printf("Pulse cualquier tecla para continuar\n");
+	scanf("%s",&continuar);
+
+	return 0;
+}
