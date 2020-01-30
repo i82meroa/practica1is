@@ -28,7 +28,8 @@
 #### Requisitos funcionales (ordenados por prioridad)
 1. Añadir un paciente
 1. Añadir una cita
-1. Modificar o cancelar citas
+1. Modificar cita
+1. Cancelar cita
 1. Mostrar lista de pacientes
 1. Buscar cliente por nombre y apellidos o por DNI
 1. Modificar datos de los pacientes
